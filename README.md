@@ -23,7 +23,7 @@ Design pattern là những giải pháp cho những vấn đề thường gặp;
 
 Wikipedia mô tả chúng như sau:
 
-> Trong lĩnh vực kĩ nghệ phần mềm, một design pattern của phần mềm là một giải pháp cho việc tái sử dụng chung cho những vấn đề thường xảy ra trong lĩnh vực thiết kế phần mềm. Nó không phải là những thiết kế hoàn chỉnh có thể chuyển thành mã nguồn hoặc mã máy. Nó chỉ là mô tả hoặc template cho việc làm sao để giải quyết vấn đề có thể sử dụng cho các tình huống khác nhau.
+> Trong lĩnh vực kĩ thuật phần mềm, một design pattern của phần mềm là một giải pháp cho việc tái sử dụng chung cho những vấn đề thường xảy ra trong lĩnh vực thiết kế phần mềm. Nó không phải là những thiết kế hoàn chỉnh có thể chuyển thành mã nguồn hoặc mã máy. Nó chỉ là mô tả hoặc template cho việc làm sao để giải quyết vấn đề có thể sử dụng cho các tình huống khác nhau.
 
 ⚠️ Hãy cẩn thận
 -----------------
@@ -48,7 +48,7 @@ Nói một cách đơn giản
 > Các creational pattern tập trung vào việc làm sao để khởi tạo một đối tượng hoặc một nhóm các đối tượng có liên hệ với nhau.
 
 Wikipedia định nghĩa như sau:
-> Trong lĩnh vực kĩ nghệ phần mềm, các creational design pattern là những design pattern sử dụng cho việc khởi tạo các đối tượng, cố gắng tạo các đối tượng theo cách phù hợp nhất với mỗi tình huống khác nhau. Hình thức tạo một đối tượng cơ bản có thể dẫn đến các vấn đề về thiết kế hoặc làm tăng độ phức tạp của thiết kế. Các creational design pattern giải quyết vấn đề bằng cách kiểm soát việc tạo đối tượng này.
+> Trong lĩnh vực kĩ thuật phần mềm, các creational design pattern là những design pattern sử dụng cho việc khởi tạo các đối tượng, cố gắng tạo các đối tượng theo cách phù hợp nhất với mỗi tình huống khác nhau. Hình thức tạo một đối tượng cơ bản có thể dẫn đến các vấn đề về thiết kế hoặc làm tăng độ phức tạp của thiết kế. Các creational design pattern giải quyết vấn đề bằng cách kiểm soát việc tạo đối tượng này.
  * [Simple Factory](#-simple-factory)
  * [Factory Method](#-factory-method)
  * [Abstract Factory](#-abstract-factory)
@@ -59,7 +59,7 @@ Wikipedia định nghĩa như sau:
 🏠 Simple Factory
 --------------
 Ví dụ thực tế
-> Hãy xem xét, bạn đang xây dựng một ngôi nhà và bạn cần cửa ra vào. Bạn có thể mặc quần áo thợ mộc, mang một ít gỗ, keo, đinh và tất cả các dụng cụ cần thiết để xây cửa và bắt đầu xây dựng nó trong nhà hoặc bạn chỉ cần gọi nhà máy và nhận cửa được xây dựng cho bạn để bạn không cần phải tìm hiểu bất cứ điều gì về việc làm cửa hoặc để đối phó với mớ hỗn độn mà đi kèm với làm cho nó..
+> Hãy xem xét, bạn đang xây dựng một ngôi nhà và bạn cần cửa ra vào. Bạn có thể mặc quần áo thợ mộc, mang một ít gỗ, keo, đinh và tất cả các dụng cụ cần thiết để làm cửa và bắt đầu làm nó trong nhà hoặc bạn chỉ cần gọi nhà máy và nhận cửa được làm cho bạn để bạn không cần phải tìm hiểu bất cứ điều gì về việc làm cửa hoặc để đối phó với mớ hỗn độn mà đi kèm với làm cho nó..
 
 Nói một cách đơn giản
 > Simple factory chỉ đơn giản là tạo ra những phiên bản cho client mà không cần lộ ra bất kì một logic về việc khởi tạo nào tới phía người dùng.
@@ -128,7 +128,7 @@ $door2 = DoorFactory::makeDoor(50, 100);
 
 **Sử dụng khi nào?**
 
-Khi tạo một đối tượng không chỉ là một vài nhiệm vụ và liên quan đến một số logic, nó có ý nghĩa để đặt nó trong một factory chuyên dụng thay vì lặp lại cùng một mã ở khắp mọi nơi.
+Khi tạo một đối tượng không chỉ là một vài nhiệm vụ và liên quan đến một số logic, nó có ý nghĩa để đặt nó trong một factory chuyên dụng thay vì lặp lại cùng một code ở khắp mọi nơi.
 
 🏭 Factory method
 --------------
@@ -226,7 +226,7 @@ Nó hữu dụng khi có một số việc được sử lý chung trong một c
 ----------------
 
 Ví dụ thực tế
->Mở rộng ví dụ cửa của chúng tôi từ Simple Factory. Căn cứ vào nhu cầu của bạn, bạn có thể nhận được một cánh cửa gỗ từ một cửa gỗ, cửa sắt từ một cửa hàng sắt hoặc cửa nhựa PVC từ cửa hàng liên quan. Thêm vào đó bạn có thể cần một chàng trai với các loại đặc sản khác nhau để phù hợp với cánh cửa, ví dụ như thợ mộc cho cửa gỗ, thợ hàn cho cửa sắt vv Như bạn thấy có sự phụ thuộc giữa cửa ra vào, cửa gỗ cần thợ mộc, cửa sắt cần thợ hàn, v.v.
+>Mở rộng ví dụ cửa của chúng tôi từ Simple Factory. Căn cứ vào nhu cầu của bạn, bạn có thể nhận được một cánh cửa gỗ từ một cửa gỗ, cửa sắt từ một cửa hàng sắt hoặc cửa nhựa PVC từ cửa hàng liên quan. Thêm vào đó bạn có thể cần một chàng trai với các kỹ năng khác nhau để phù hợp với cánh cửa, ví dụ như thợ mộc cho cửa gỗ, thợ hàn cho cửa sắt vv Như bạn thấy có sự phụ thuộc giữa cửa ra vào, cửa gỗ cần thợ mộc, cửa sắt cần thợ hàn, v.v.
 
 Nói một cách ngắn gọn
 > một factory của các factory; một factory nhóm những cá thể nhưng các factory liên kết/phụ thuộc lẫn nhau mà không cần chỉ rõ các class cụ thể của nó.
@@ -541,7 +541,7 @@ Nói một cách ngắn gọn
 > Đảm bảo là chỉ có một đối tượng duy nhất của mỗi class được tạo ra.
 
 Wikipedia định nghĩa là
->Trong kĩ nghệ phần mềm,singleton patternn là một mẫu thiết kế phần mềm hạn chế sự khởi tạo của một lớp thành một đối tượng. Điều này rất hữu ích khi cần một đối tượng chính xác để điều phối các hành động trên toàn hệ thống..
+>Trong kĩ thuật phần mềm,singleton patternn là một mẫu thiết kế phần mềm hạn chế sự khởi tạo của một lớp thành một đối tượng. Điều này rất hữu ích khi cần một đối tượng chính xác để điều phối các hành động trên toàn hệ thống..
 
 Singleton pattern thực sự được coi là một mô hình anti-pattern và nên tránh lạm dụng nó . Nó không nhất thiết là xấu và có thể có một số trường hợp sử dụng hợp lệ nhưng nên được sử dụng thận trọng vì nó đưa ra một trạng thái toàn cục trong ứng dụng của bạn và thay đổi nó ở một nơi có thể ảnh hưởng đến các khu vực khác và nó có thể trở nên khá khó khăn để gỡ lỗi. Điều tệ hại khác về họ là nó làm cho mã của bạn được kết hợp chặt chẽ cộng với việc singleton có thể khó khăn..
 
